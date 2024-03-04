@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Dashboard</title>
+    <link rel="stylesheet" href="../assets/plugin/boostrap/css/bootstrap.css">
+    <style>
+        .main-content {
+            width: 100vw;
+            min-height: 100vh;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body style="background-color: #F5F5F5;">
+    <div class="header text-center mb-3">
+        <!-- <h1 class="header-title"> Tên trang web </h1> -->
+    </div>
+    <div id="main">
+        <div class="main-content">
+            <div class="container">
+                <!-- ----Business Overview---- -->
+                <div class="row mb-4">
+                    <div class="col-sm-12">
+                        <div class="card border-primary">
+                            <div class="card-header">
+                                <h2 class="card-title text-center" style="font-size: 1.8vw;">Business Overview</h2>
+                            </div>
+                            <div class="card-body">
+                                <!-- <iframe title="final" width="100%" height="600px"
+                                    src="https://app.powerbi.com/reportEmbed?reportId=bf80b89e-4844-4e6f-b603-d49c2c426a9c&autoAuth=true&ctid=5e158e2a-0596-4a6c-8801-3502aef4563f"
+                                    frameborder="0" allowFullScreen="true"></iframe> -->
+                                <iframe title="final" width="100%" height="600px"
+                                    src="https://app.powerbi.com/reportEmbed?reportId=ab3c8178-8a43-4af9-bd98-3695f1a3ef3f&autoAuth=true&ctid=5e158e2a-0596-4a6c-8801-3502aef4563f"
+                                    frameborder="0" allowFullScreen="true">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ----Sale Prediction Model---- -->
+                <div class="row mb-4">
+                    <div class="col-sm-12">
+                        <div class="card border-primary">
+                            <div class="card-header">
+                                <h2 class="card-title text-center" style="font-size: 1.8vw;">Sale Prediction Model</h2>
+                            </div>
+                            <div class="card-body">
+                                <iframe title="final" width="100%" height="600px"
+                                    src="https://app.powerbi.com/reportEmbed?reportId=ab3c8178-8a43-4af9-bd98-3695f1a3ef3f&autoAuth=true&ctid=5e158e2a-0596-4a6c-8801-3502aef4563f"
+                                    frameborder="0" allowFullScreen="true"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ----ChatGPT API---- -->
+                <div class="row mb-4">
+                    <div class="col-sm-12 mb-3">
+                        <div class="card border-primary">
+                            <div class="card-header">
+                                <h2 class="card-title text-center" style="font-size: 1.8vw;">MaybeLLingua</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="card border-primary">
+                                            <div class="card-header">
+                                                <h3 class="card-title text-center" style="font-size: 1vw;">Feeback
+                                                    Analysis</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="dropdown" id="dropdown_1">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">Select Prompt
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item">Feedback Summarize</a>
+                                                        </li>
+                                                        <li><a class="dropdown-item">Feedback Scoring</a></li>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <form action="" id="form_upload_file_1">
+                                                    <div class="form-group">
+                                                        <label for="" class="form-label"></label>
+                                                        <textarea id="userprompt1" class="form-control"
+                                                            placeholder="Enter Prompt..." aria-label="Enter Prompt"
+                                                            rows="5" style="font-size: 0.8vw;"></textarea>
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <input class="form-control" type="file" id="upload_file_1"
+                                                            onchange="displayFileContent('upload_file_1', 'userprompt1')">
+                                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                                    </div>
+                                                </form>
+                                                <div class="box-output text-start hidden">
+                                                    <label for="" class="h5">Result:</label>
+                                                    <textarea id="result_prompt1" type="text"
+                                                        style="height: 150px; width: 100%; font-size: 0.8vw;"
+                                                        readonly></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="card border-primary h-100">
+                                            <div class="card-body">
+                                                <iframe title="final" width="100%" height="100%"
+                                                    src="https://app.powerbi.com/reportEmbed?reportId=ab3c8178-8a43-4af9-bd98-3695f1a3ef3f&autoAuth=true&ctid=5e158e2a-0596-4a6c-8801-3502aef4563f"
+                                                    frameborder="0" allowFullScreen="true"></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ----Marketing evaluation---- -->
+                <div class="row mb-4">
+                    <div class="col-sm-12 mb-3">
+                        <div class="card border-primary">
+                            <div class="card-header">
+                                <h2 class="card-title text-center" style="font-size: 1.8vw;">Marketing evaluation</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="card border-primary">
+                                            <div class="card-header">
+                                                <h3 class="card-title text-center" style="font-size: 1vw;">Product
+                                                    Improvement Support</h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="dropdown" id="dropdown_2">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">Select Prompt
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                        <li><a class="dropdown-item">Product Improvement</a></li>
+                                                        <li><a class="dropdown-item">Marketing Campaign</a></li>
+                                                    </ul>
+                                                </div>
+                                                <form action="" id="form_upload_file_2">
+                                                    <div class="form-group">
+                                                        <label for="" class="form-label"></label>
+                                                        <textarea id="userprompt2" class="form-control"
+                                                            placeholder="Enter Prompt..." aria-label="Enter Prompt"
+                                                            rows="5" style="font-size: 0.8vw;"></textarea>
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <input class="form-control" type="file" id="userprompt2"
+                                                            onchange="displayFileContent('userprompt2', 'upload_file_2')">
+                                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                                    </div>
+                                                </form>
+                                                <div class="box-output text-start hidden">
+                                                    <label for="" class="h5">Result:</label>
+                                                    <textarea id="result_prompt2" type="text"
+                                                        style="height: 150px; width: 100%; font-size: 0.8vw;"
+                                                        readonly></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="card border-primary h-100">
+                                            <div class="card-body">
+                                                <iframe title="final" width="100%" height="100%"
+                                                    src="https://app.powerbi.com/reportEmbed?reportId=ab3c8178-8a43-4af9-bd98-3695f1a3ef3f&autoAuth=true&ctid=5e158e2a-0596-4a6c-8801-3502aef4563f"
+                                                    frameborder="0" allowFullScreen="true"></iframe>
+                                                <!-- <iframe title="final" width="100%" height="100%"
+                                                    src="https://app.powerbi.com/reportEmbed?reportId=bf80b89e-4844-4e6f-b603-d49c2c426a9c&autoAuth=true&embeddedDemo=true"
+                                                    frameborder="0" allowFullScreen="true"></iframe> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../assets/plugin/jquery.js"></script>
+<script src="../assets/plugin/boostrap/js/popper.min.js"></script>
+<script src="../assets/plugin/boostrap/js/bootstrap.js"></script>
+<script>
+    function check_prompt(userPromptID, resultID) {
+        var prompt = document.getElementById(userPromptID).value;
+        var input = { 'prompt': prompt };
+        fetch('/processing_prompt', {
+            method: "POST",
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(input)
+        })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById(resultID).value = data.result
+            })
+            .catch(error => console.error('Error', error));
+    }
+    // showing the content of the uploaded file
+    function displayFileContent(inputId, textareaId) {
+        const fileInput = document.getElementById(inputId);
+        const textarea = document.getElementById(textareaId);
+
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const fileContent = e.target.result;
+            textarea.value = fileContent;
+        };
+
+        reader.readAsText(file, "UTF-8");
+    }
+    // send uploaded file/text to backend 
+    function sendDataToBackend(contentId, dropdownId, resultId) {
+        const url = 'http://127.0.0.1:5000/helloword';
+        //  Get the selected value from dropdown lsit
+        // var selectedValue = $(dropdownId + '.dropdown-toggle').text();
+        var selectedValue = $(dropdownId).text();
+
+        //  Get the content of the prompt box
+        var formData = new FormData();
+
+        // Create FormData
+        formData.append('input', $(contentId).val());
+        formData.append('selectedValue', selectedValue);
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                let data_out = data.data_out;
+                console.log(data_out);
+                $(resultId).val(data_out);
+                //sua o day
+                // $('#abc').html(data_out);
+                // console.log(data_out)
+                // If data_out is a string and you want to set it as the value of an input field
+                // assuming the input field has an id 'result_prompt1'
+                $(resultId).val(data_out);
+                // $('#result_prompt11').val(data_out);
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR);
+            }
+        });
+    }
+
+    // Capture selected text
+    $(document).ready(function () {
+        $('#dropdown_1 .dropdown-menu a').on('click', function () {
+            var selectedValue = $(this).text();
+            $('#dropdownMenuButton1').text(selectedValue);
+        });
+    });
+    $(document).ready(function () {
+        $('#dropdown_2 .dropdown-menu a').on('click', function () {
+            var selectedValue = $(this).text();
+            $('#dropdownMenuButton2').text(selectedValue);
+        });
+    });
+
+    // Call function to send content and template option to backend
+    $(document).ready(function () {
+        $('#form_upload_file_1').submit(function (e) {
+            e.preventDefault();
+
+            // Call the function with the appropriate arguments
+            sendDataToBackend('#userprompt1', '#dropdownMenuButton1', '#result_prompt1');
+        });
+        $('#form_upload_file_2').submit(function (e) {
+            e.preventDefault();
+
+            // Call the function with the appropriate arguments
+            sendDataToBackend('#userprompt2', '#dropdownMenuButton2', '#result_prompt2');
+        });
+    });
+    $(document).ready(function () {
+        $('#myForm').submit(function (event) {
+            // Prevent the default form submission
+            event.preventDefault();
+            // Get the selected value from the dropdown
+            var selectedValue = $('#AgencyDetails').val();
+            // Send the selected value to the backend using AJAX
+            $.ajax({
+                url: '/your-backend-endpoint', // Replace with your actual backend endpoint
+                method: 'POST',
+                data: { selectedValue: selectedValue },
+                success: function (response) {
+                    // Handle the response from the backend if needed
+                    console.log(response);
+                },
+                error: function (error) {
+                    // Handle errors if the AJAX request fails
+                    console.error('Error:', error);
+                }
+            });
+        });
+    });
+
+</script>
+
+</html>
